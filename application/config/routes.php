@@ -55,3 +55,4 @@ public function index(){
     $this->display('home');
     }
     
+$route['default_controller'] = 'internships';
