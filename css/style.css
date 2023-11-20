@@ -64,8 +64,27 @@ nav{
 .likeIcon{
     padding-right: 10px;
 }
+.categorieHeader {
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+}
 
-
+.categorieHeader ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.categorieHeader li{
+    padding: 9px 42px;
+    border-radius: 8px;
+    border: 4px solid #F5CF80;
+    list-style: none;
+}
+.categorieHeader li a{
+    text-decoration: none;
+    color: #020202;
+}
 
 
 .footerText{
