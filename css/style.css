@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 90%;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    color: #020202;
+    font-family: Broadway;
+    font-size: 40px;
+    font-style:normal;
+    font-weight: 400;
+    line-height:normal;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.searchForm{
+    display: flex;
+    justify-content: center;
+}
+.searchForm button{
+    width: 150px;
+    height: 44px;
+    color: rgba(0, 0, 0, 0.35);
+    font-family: Heebo;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 30px;
+}
+.mySearch{
+    width: 700px;
+    height: 44px;
+    flex-shrink: 0;
+    padding-left: 55px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.35);
+    font-family: Heebo;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-image: url("../images/search.svg"); 
+    background-repeat: no-repeat;
+    background-position: 20px 10px; 
+    background-size: 20px;
+    border-color: rgba(0, 0, 0, 0.35);
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.likeIcon{
+    padding-right: 10px;
+}
+
+
+
+
+.footerText{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 100px;
+    justify-content: center;
+    color: #020202;
+    border-top: 2px solid #C3272C;
+    font-family: Hind Siliguri;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: normal;
+    text-transform: uppercase;
+    align-items: center;
+    margin-top: 50px;
+}
