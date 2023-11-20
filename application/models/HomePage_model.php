@@ -7,11 +7,21 @@
 
         public function getCategorie($slug = FALSE){
             if($slug === FALSE){
-                $query = $this->db->get('produit');
+                $query = $this->db->query("SELECT DISTINCT categorie FROM produit");
+                //$query = $this->db->get('produit');
                 return $query->result_array();
             }
             
-            $query = $this->db->get_where('produit', array('id' => $slug));
+            // $query = $this->db->get_where('produit', array('id' => $slug));
+            // $query = $this->db->group_by('categorie'); 
+            
+
+            //$query = $this->db->distinct()->select('produit')->get_where('produit', array('id' => $slug));
+
+            $query = $this->db->query("SELECT DISTINCT categorie FROM produit WHERE id = $slug");
+        
+
+            // SELECT DISTINCT categorie FROM produit WHERE id = $slug
             return $query->row_array();
         }
     }
