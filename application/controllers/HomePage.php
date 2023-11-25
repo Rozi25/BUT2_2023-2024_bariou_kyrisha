@@ -12,6 +12,7 @@ class HomePage extends CI_Controller {
     public function index(){
         $data['title'] = "Home page";
         $data['categorie'] = $this->homePage_model->getCategorie();
+        $data['marque'] = $this->homePage_model->getMarque();
 
         //function in php to remove doubles
         $this->load->helper('url');

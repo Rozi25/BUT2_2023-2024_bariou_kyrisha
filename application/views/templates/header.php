@@ -38,7 +38,6 @@
         </nav>
         <div class="categorieHeader">
             <ul>
-                
                 <?php  foreach($categorie as $key => $value): ?>
                 <li> <a href=""><?php echo $value['categorie'] ?></a></li>
                 <?php endforeach ?>
