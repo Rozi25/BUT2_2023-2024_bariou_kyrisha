@@ -11,7 +11,7 @@
                 //$query = $this->db->get('produit');
                 return $query->result_array();
             }
-            $query = $this->db->query("SELECT DISTINCT categorie FROM produit WHERE id = $slug");
+            $query = $this->db->get_where('produit', array('categorie' => '$slug'));
 
             return $query->row_array();
         }
@@ -24,6 +24,17 @@
             }
             $query = $this->db->query("SELECT DISTINCT marque FROM produit WHERE id = $slug");
             
+            return $query->row_array();
+        }
+
+        public function getType($slug = FALSE){
+            if($slug === FALSE){
+                $query = $this->db->query("SELECT type FROM produit WHERE categorie = '$slug'");
+                //$query = $this->db->get('produit');
+                return $query->result_array();
+            }
+            $query = $this->db->query("SELECT type FROM produit WHERE categorie = '$slug'");
+
             return $query->row_array();
         }
     }
