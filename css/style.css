@@ -84,14 +84,14 @@ nav {
 
 .categorieHeader,
 .marqueHeader,
-.serviceHomePage {
+.serviceHomePage, .listOfProducts {
 	width: 90%;
 	margin: 10px auto;
 }
 
 .categorieHeader ul,
 .marqueHeader ul,
-.serviceHomePage {
+.serviceHomePage, .listOfProducts {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -295,7 +295,7 @@ nav {
 
 /*-- Page connexion --*/
 
-.enesemble  {
+/* .enesemble  {
     position: relative;
     min-height: 100vh;
     background-color: #E1E8EE;
@@ -559,268 +559,51 @@ nav {
     padding: 0;
     box-sizing: border-box;
     color: #020202;
-}
-body{
-    background-color: #F5F5F5;
-    scroll-behavior: smooth;
-}
-header{
-    /* position: fixed; */
-    top: 0;
-    width: 100%;
-    background-color: #F5F5F5;
-    z-index: 2;
-}
-nav{
-    width: 90%;
-    margin: 0 auto;
-    gap: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    font-family: Broadway;
-    font-size: 40px;
-    font-style:normal;
-    font-weight: 400;
-    line-height:normal;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.searchForm{
-    display: flex;
-    justify-content: center;
-}
-.searchForm button{
-    width: 150px;
-    height: 44px;
-    color: rgba(0, 0, 0, 0.35);
-    font-family: Heebo;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    margin-left: 30px;
-}
-.mySearch{
-    width: 700px;
-    height: 44px;
-    flex-shrink: 0;
-    padding-left: 55px;
-    border-radius: 5px;
-    color: rgba(0, 0, 0, 0.35);
-    font-family: Heebo;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    background-image: url("../images/search.svg"); 
-    background-repeat: no-repeat;
-    background-position: 20px 10px; 
-    background-size: 20px;
-    border-color: rgba(0, 0, 0, 0.35);
-}
-.icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.likeIcon{
-    padding-right: 10px;
-}
-.categorieHeader, .marqueHeader , .serviceHomePage{
-    width: 90%;
-    margin: 10px auto;
-}
-
-.categorieHeader ul, .serviceHomePage{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.categorieHeader li{
-    border-radius: 8px;
-    border: 4px solid #F5CF80;
-    list-style: none;
-    margin-bottom: 10px;
-}
-.categorieHeader li a, .marqueHeader li a{
-    text-decoration: none;
-    padding: 10px 30px;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    display: inline-block;
-}
-.categorieHeader li a:hover{
-    background-color: #F5CF80;
-}
+} */
 
 
-.bannerHomePage{
-    background-image: url('../images/banner.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    height: 800px;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 150px;
+.listOfProducts{
+    margin-top: 200px;
 }
-.bannerHomePage h2{
-    position: relative;
-    top:250px;
-    left: 50px;
-    width: 500px;
-    font-family: Heebo;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 700;
-}
-.bannerHomePage a{
-    left:50px;
-    top: 320px;
-}
-.bannerHomePage a, .prixHomePage a{
-    border-radius: 5px;
-    border: 3px solid #C3272C;
-    background: rgba(245, 245, 245, 0.50);
-    text-decoration: none;
-    padding: 15px 70px;
-    font-family: Hind Siliguri;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    position: relative;
-}
-.bannerHomePage a:hover, .prixHomePage a:hover{
-    background-color: rgba(195,39,44, 0.50);
-}
-
-
-.marqueHeader ul{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 29px;
-}
-.marqueHeader li{
-    border-radius: 8px;
-    border: 4px solid #C3272C;
-    list-style: none;
-    margin-bottom: 10px;
-}
-.marqueHeader li a:hover{
-    background-color: #C3272C;
-}
-.marqueHeader img{
-    height: 20px;
-    padding-top: 5px;
-}
-.marqueHeader h2{
-    color: #020202;
-    font-family: Inter;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 70px;
-    margin-bottom: 30px;
-}
-
-.prixHomePage{
-    background-image: url('../images/prix.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    height: 480px;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 70px;
-}
-.prixHomePage h2{
-    color: #020202;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Merriweather Sans;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    position: relative;
-    top: 50px;
-    left: 1020px;
-    width: 500px;
-}
-.prixHomePage p{
-    color: #FFF;
-    font-family: Merriweather Sans;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    width: 300px;
-    position: relative;
-    top: 100px;
-    left: 1130px;
-}
-.prixHomePage a{
-    right: -1350px;
-    top:200px
-}
-
-.serviceHomePage{
-    margin-top: 70px;
-
-}
-.serviceHomePage .service{
+.eachProduct{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 200px;
+    margin-bottom: 70px;
+    position: relative;
 }
-.serviceHomePage .service p{
-    margin-top: 20px;
-    color: #000;
-    text-align: center;
-    font-family: Hind Siliguri;
-    font-size: 27px;
-    font-style: normal;
-    font-weight: 600;
+.eachProduct h2{
+    margin: 20px 0;
 }
-
-.footerText{
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    height: 100px;
-    justify-content: center;
-    border-top: 2px solid #C3272C;
+.eachProduct p{
+    padding: 13px 35px;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #C3272C;
+    color: #F5F5F5;
     font-family: Hind Siliguri;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: normal;
-    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 400;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.eachProduct a{
+    display: inline-flex;
+    padding: 13px 131px;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    text-decoration: none;
+    color: #020202;
+    font-family: Hind Siliguri;
+    font-size: 26px;
+    font-weight: 600;
+    border: 3px solid ;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #C3272C 0%, #F5CF80 100%);
+    border-radius: 7px;
 }
-#myBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    background-color: #F5CF80;
-    border: none;
-    cursor: pointer;
-    -webkit-transition: all
-
+.eachProduct a:hover{
+    background: linear-gradient(90deg, #C3272C 0%, #F5CF80 100%);   
 }
-
-
