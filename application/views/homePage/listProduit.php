@@ -1,9 +1,10 @@
 <div class="listOfProducts">
     
-    <?php  foreach($marque as $key => $value): ?>
+    <?php  foreach($content as $value): ?>
         <div class="eachProduct">
             <a href="">
-                <img src="<?php echo base_url(); ?>images/marque/<?php echo $value['marque'] ?>.png" alt="">
+                <img src="<?php echo base_url(); ?>images/produit/<?php echo $value['id'] ?>.jpeg" alt="">
+                <h2> <?= $value['type']; ?> </h2>
             </a>
         </div>
     <?php endforeach ?>
