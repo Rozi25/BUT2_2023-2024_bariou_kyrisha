@@ -29,13 +29,18 @@
 
         public function getType($slug = FALSE){
             if($slug === FALSE){
-                $query = $this->db->query("SELECT type FROM produit WHERE categorie = '$slug'");
+                $query = $this->db->query("SELECT type FROM produit");
                 //$query = $this->db->get('produit');
                 return $query->result_array();
             }
-            $query = $this->db->query("SELECT type FROM produit WHERE categorie = '$slug'");
+            $slug = str_replace('%20', ' ', $slug);
+            $slug = str_replace('%C3%A9', 'é', $slug);
+            $this->db->select('*');
+            $this->db->from('produit');
+            $this->db->where('categorie' , $slug);
+            $query = $this->db->get();
 
-            return $query->row_array();
+            return $query->result_array();
         }
     }
 
