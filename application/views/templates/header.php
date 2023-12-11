@@ -39,7 +39,7 @@
         <div class="categorieHeader">
             <ul>
                 <?php  foreach($categorie as $key => $value): ?>
-                <li> <a href=""><?php echo $value['categorie'] ?></a></li>
+                <li> <a href="listProduit/<?php echo $value['categorie'] ?>"><?php echo $value['categorie'] ?></a></li>
                 <?php endforeach ?>
             </ul>
         </div>

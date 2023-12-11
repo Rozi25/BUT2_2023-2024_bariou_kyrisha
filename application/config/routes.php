@@ -53,4 +53,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['homePage'] = 'homePage';
-$route['homePage/(:any)'] = 'news/view/$1';
+$route['homePage/(:any)'] = 'homePage/listProduit/$1';

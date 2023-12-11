@@ -14,10 +14,26 @@ class HomePage extends CI_Controller {
         $data['categorie'] = $this->homePage_model->getCategorie();
         $data['marque'] = $this->homePage_model->getMarque();
 
-        //function in php to remove doubles
         $this->load->helper('url');
         $this->load->view('templates/header', $data);
         $this->load->view('homePage/index', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function listProduit($slug = NULL){
+        $data['listProduit'] = $this->homePage_model->getType($slug);
+
+        if(empty($data['listProduit'])){
+            show_404();
+        }
+
+        $data['categorie'] = $this->homePage_model->getCategorie();
+        
+        $data['content'] = $data['listProduit']['type'];
+
+        $this->load->helper('url');
+        $this->load->view('templates/header', $data);
+        $this->load->view('homePage/listProduit', $data);
         $this->load->view('templates/footer');
     }
 }
