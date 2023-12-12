@@ -295,7 +295,7 @@ nav {
 
 /*-- Page connexion --*/
 
-/* .enesemble  {
+ .enesemble  {
     position: relative;
     min-height: 100vh;
     background-color: #E1E8EE;
@@ -559,7 +559,7 @@ nav {
     padding: 0;
     box-sizing: border-box;
     color: #020202;
-} */
+} 
 
 
 .listOfProducts{
@@ -571,6 +571,9 @@ nav {
     align-items: center;
     margin-bottom: 70px;
     position: relative;
+}
+.eachProduct img{
+    width: 200px;
 }
 .eachProduct h2{
     margin: 20px 0;

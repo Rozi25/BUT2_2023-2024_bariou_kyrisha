@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <a href="" class="logo">dicatlon</a>
+            <a href="<?php echo base_url()?>index.php/HomePage/" class="logo">dicatlon</a>
             <form>
                 <div class="searchForm">
                     <input type="search" class="mySearch" name="q"  placeholder="Rechercher un produit…" />

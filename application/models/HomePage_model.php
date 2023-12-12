@@ -28,16 +28,31 @@
         }
 
         public function getType($slug = FALSE){
-            if($slug === FALSE){
-                $query = $this->db->query("SELECT type FROM produit");
-                //$query = $this->db->get('produit');
-                return $query->result_array();
-            }
+            // if($slug === FALSE){
+            //     $query = $this->db->query("SELECT type FROM produit");
+            //     //$query = $this->db->get('produit');
+            //     return $query->result_array();
+            // }
             $slug = str_replace('%20', ' ', $slug);
             $slug = str_replace('%C3%A9', 'é', $slug);
             $this->db->select('*');
             $this->db->from('produit');
             $this->db->where('categorie' , $slug);
+            $query = $this->db->get();
+
+            return $query->result_array();
+        }
+        public function getDescr($slug = FALSE){
+            // if($slug === FALSE){
+            //     $query = $this->db->query("SELECT type FROM produit");
+            //     //$query = $this->db->get('produit');
+            //     return $query->result_array();
+            // }
+            $slug = str_replace('%20', ' ', $slug);
+            $slug = str_replace('%C3%A9', 'é', $slug);
+            $this->db->select('*');
+            $this->db->from('produit');
+            $this->db->where('type' , $slug);
             $query = $this->db->get();
 
             return $query->result_array();

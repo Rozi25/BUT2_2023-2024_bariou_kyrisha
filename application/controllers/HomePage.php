@@ -21,6 +21,7 @@ class HomePage extends CI_Controller {
     }
 
     public function listProduit($slug = FALSE){
+        $data['title'] = "Categorie";
         $data['listProduit'] = $this->HomePage_model->getType($slug);
 
         if(empty($data['listProduit'])){
@@ -35,5 +36,34 @@ class HomePage extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('homePage/listProduit', $data);
         $this->load->view('templates/footer');
+    }
+
+
+    public function descripProduit($slug = FALSE){
+        $data['title'] = "Description";
+        $data['descripProduit'] = $this->HomePage_model->getDescr($slug);
+
+        if(empty($data['descripProduit'])){
+            show_404();
+        }
+
+        $data['categorie'] = $this->HomePage_model->getCategorie();
+        
+        $data['content'] = $data['descripProduit'];
+
+        $this->load->helper('url');
+        $this->load->view('templates/header', $data);
+        $this->load->view('homePage/descripProduit', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function connexion(){
+        $data['title'] = "Connexion";
+        
+
+        $this->load->helper('url');
+        
+        $this->load->view('homePage/connexion', $data);
+        
     }
 }
