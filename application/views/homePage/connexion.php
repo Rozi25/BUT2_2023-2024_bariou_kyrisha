@@ -11,39 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
 </head>
 <body>
+   
+	<h2>Login</h2>
+    <?php echo validation_errors(); ?>
+    <?php if(isset($error)) echo $error; ?>
+    <?php echo form_open('HomePage/login_validation'); ?>
+        <label for="login">Username:</label>
+        <input type="text" name="login" required><br>
 
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
 
-<div class="ensemble">
-	<div class="form-structor">
-		<div class="signup">
-			<h2 class="form-title" id="signup"><span>ou</span>Créer un compte</h2>
-			
-			<div class="form-holder">
-				
-				<input name="login" type="text" class="input" placeholder="Nom d'utilisateur"/>
-				<input name="nom" type="text" class="input" placeholder="Nom" />
-				<input name="prenom" type="text" class="input" placeholder="Prenom"/>
-				<input name="ddn" type="date" class="input" placeholder="Prenom"/>
-				<input name="email" type="email" class="input" placeholder="Email"/>
-				<input name="mdp" type="password" class="input" placeholder="Mot de passe" />
-				
-			</div>
-			<button class="submit-btn"> Créer mon compte </button>
-		</div>
-</div>		
-		
-		<div class="login slide-up">
-			<div class="center">
-				<h2 class="form-title" id="login"><span>ou</span>Connexion</h2>
-				<div class="form-holder">
-					<input type="email" class="input" placeholder="Email" />
-					<input type="password" class="input" placeholder="Mot de passe" />
-				</div>
-				<button class="submit-btn">connexion</button>
-			</div>
-		</div>
-	</div>
-    
+        <input type="submit" value="Login">
+    <?php echo form_close(); ?>
+
 </body>
 </html>
 
